@@ -1,0 +1,202 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --clr-black: #1c1c1c;
+    --clr-gray: #ececec;
+    --clr-white: #ffffff;
+
+    --type-inTrainig: #A8A878;
+    --type-trainig: #F08030;
+    --type-rookie: #6890F0;
+    --type-champion: #78C850;
+    --type-ultimate: #F8D030;
+    --type-fresh: #98D8D8;
+    --type-mega: #C03028;
+    --type-armor: #A040A0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--clr-black);
+    font-family: 'VT323', monospace;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--clr-gray);
+}
+
+header {
+    padding-block: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+}
+
+.logo {
+    width: 10rem;
+    height: auto;
+}
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-inline: 1rem;
+    padding: 1rem;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.btn-header {
+    background-color: var(--clr-gray);
+    padding: .5rem;
+    border-radius: 100vmax;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .2s;
+    font-size: 1.5rem;
+}
+
+.btn-header:hover {
+    transform: scale(1.1);
+}
+
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.digimon-todos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.digimon {
+    border-radius: 1rem;
+    background-color: var(--clr-white);
+    padding-block: 1rem;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.digimon-level-back {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 6rem;
+    font-weight: 800;
+    z-index: -1;
+    color: var(--clr-gray);
+}
+
+.digimon-imagen {
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.digimon-imagen img {
+    width: 100%;
+    max-width: 10rem;
+}
+
+.digimon-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-inline: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.digimon-nombre {
+    font-size: 3rem;
+}
+
+.digimon-level {
+    font-size: 1.5rem;
+}
+
+.level {
+    padding: .25rem .5rem;
+    border-radius: 100vmax;
+}
+
+/* Aquí comienzan los colores de botones según tipo */
+.inTrainig {
+    background-color: var(--type-inTrainig);
+    color: var(--clr-black);
+}
+
+.trainig {
+    background-color: var(--type-trainig);
+    color: var(--clr-black);
+}
+
+.rookie {
+    background-color: var(--type-rookie);
+    color: var(--clr-white);
+}
+
+.champion {
+    background-color: var(--type-champion);
+    color: var(--clr-black);
+}
+
+.ultimate {
+    background-color: var(--type-ultimate);
+    color: var(--clr-black);
+}
+
+.fresh {
+    background-color: var(--type-fresh);
+    color: var(--clr-black);
+}
+
+.mega {
+    background-color: var(--type-mega);
+    color: var(--clr-white);
+}
+
+.armor{
+    background-color: var(--type-armor);
+    color: var(--clr-white);
+}
+
+@media screen and (min-width: 470px) {
+    .digimon-todos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 770px) {
+    .digimon-todos {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
