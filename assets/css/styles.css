@@ -147,12 +147,12 @@ main {
 }
 
 /* Aquí comienzan los colores de botones según tipo */
-.inTrainig {
+.in-training {
     background-color: var(--type-inTrainig);
     color: var(--clr-black);
 }
 
-.trainig {
+.training{
     background-color: var(--type-trainig);
     color: var(--clr-black);
 }
