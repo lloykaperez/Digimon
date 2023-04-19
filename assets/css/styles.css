@@ -5,6 +5,7 @@
     --clr-black: #1c1c1c;
     --clr-gray: #ececec;
     --clr-white: #ffffff;
+    --clr-blue: #204A84;
 
     --type-inTrainig: #A8A878;
     --type-trainig: #F08030;
@@ -37,7 +38,7 @@ button {
 
 body {
     min-height: 100vh;
-    background-color: var(--clr-gray);
+    background-color: var(--clr-blue);
 }
 
 header {
@@ -48,14 +49,14 @@ header {
 }
 
 .logo {
-    width: 10rem;
+    width: 12rem;
     height: auto;
 }
 .nav {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    align-items: flex-start;
+    align-items: center;
     padding-inline: 1rem;
     padding: 1rem;
 }
@@ -68,7 +69,8 @@ header {
 }
 
 .btn-header {
-    background-color: var(--clr-gray);
+    background-color: var(--clr-black);
+    color: var(--clr-white);
     padding: .5rem;
     border-radius: 100vmax;
     cursor: pointer;
@@ -80,6 +82,24 @@ header {
 .btn-header:hover {
     transform: scale(1.1);
 }
+
+#buscador {
+    background-color: var(--clr-white);
+    border: 2px solid var(--clr-black);
+    border-radius: 100vmax;
+    color: var(--clr-black);
+    font-size: 1.5rem;
+    height: 3rem;
+    padding: 2rem;
+    transition: border 0.2s ease-in-out;
+    width: 20rem;
+  }
+  
+  #buscador:focus {
+    border-color: #f7931e;
+    outline: none;
+  }
+  
 
 main {
     padding: 2rem;
@@ -147,6 +167,10 @@ main {
 }
 
 /* Aquí comienzan los colores de botones según tipo */
+
+
+
+
 .in-training {
     background-color: var(--type-inTrainig);
     color: var(--clr-black);
@@ -186,6 +210,20 @@ main {
     background-color: var(--type-armor);
     color: var(--clr-white);
 }
+
+footer {
+    color: var(--clr-white);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+  
+footer a {
+    color: var(--type-ultimate);
+    font-weight: bold;
+    text-decoration: none;
+}
+  
 
 @media screen and (min-width: 470px) {
     .digimon-todos {

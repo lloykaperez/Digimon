@@ -53,7 +53,7 @@ botonesHeader.forEach(boton => boton.addEventListener("click", (event) => {
     const botonId = event.currentTarget.id;
 
     listaDigimon.innerHTML = "";
-
+    
     if (botonId === "ver-todos") {
         fetch(URL)
             .then(response => response.json())
@@ -74,21 +74,24 @@ botonesHeader.forEach(boton => boton.addEventListener("click", (event) => {
 }));
 
 
-buscador.addEventListener("input", (event) => {
-  const busqueda = event.target.value.toLowerCase();
-  filtrarDigimonPorNombre(busqueda);
-});
-
+// Función para filtrar los digimones por nombre
 function filtrarDigimonPorNombre(nombre) {
+  // Vaciar la lista de digimones para mostrar solo el que corresponde al nombre buscado
   listaDigimon.innerHTML = "";
 
+  // Obtener el digimon que coincide con el nombre buscado
   fetch(URL)
     .then(response => response.json())
     .then(data => {
-      data.forEach(digi => {
-        if (digi.name.toLowerCase().includes(nombre)) {
-          mostrarDigimon(digi);
-        }
-      });
+      const digimonEncontrado = data.filter(digi => digi.name.toLowerCase() === nombre.toLowerCase())[0];
+      if (digimonEncontrado) {
+        mostrarDigimon(digimonEncontrado);
+      }
     });
 }
+
+buscador.addEventListener("input", (event) => {
+  const busqueda = event.target.value;
+  filtrarDigimonPorNombre(busqueda);
+});
+
