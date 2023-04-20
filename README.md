@@ -1,2 +1,3 @@
 # Digimon
-Trabajo practico de uso de API
+
+Trabajo practico del módulo2: Fundamentos de Desarrollo Fron End
